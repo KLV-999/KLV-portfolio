@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cyan: #00E5FF;
+    --color-space-bg: #05050A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-space-bg);
+    color: #F3F4F6;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--color-space-bg);
+    color: #F3F4F6;
+    font-family: var(--font-space-grotesk), sans-serif;
+    cursor: default;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Hide default mouse cursor on devices supporting fine hover */
+  @media (hover: hover) and (pointer: fine) {
+    body, a, button, input, select {
+      cursor: none !important;
+    }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05050A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F293D;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+  box-shadow: 0 0 10px #00E5FF;
+}
+
+/* Subtle Sci-Fi HUD Scanline overlay */
+.hud-scanline {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Frosted glass utility */
+.glass-panel {
+  background: rgba(13, 14, 21, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-cyan {
+  background: rgba(5, 10, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+}
