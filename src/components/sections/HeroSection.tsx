@@ -63,16 +63,6 @@ export const HeroSection: React.FC = () => {
           &ldquo;{PORTFOLIO_DATA.tagline}&rdquo;
         </motion.blockquote>
 
-        {/* Sub-description Paragraph */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xs sm:text-sm md:text-base text-gray-300 max-w-xl mx-auto mb-8 leading-relaxed font-sans px-4"
-        >
-          {PORTFOLIO_DATA.subDescription}
-        </motion.p>
-
         {/* Space-Themed Search Console */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
